@@ -38,7 +38,7 @@ const plugins = [
     new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional
-        filename: '[name].css',
+        filename: `[name].${+(new Date())}.js`,
     }),
 ];
 
@@ -55,7 +55,7 @@ const getEntries = (theme) => {
 
 const tauchartsStyles = themes.map((theme) => ({
     output: {
-        filename: '[name].styles.js',
+        filename: `[name].styles.${+(new Date())}.js`,
         path: resolvePath('../dist/'),
     },
     entry: {
@@ -70,7 +70,7 @@ const tauchartsStyles = themes.map((theme) => ({
 
 const tauchartsBrewerStyles = {
     output: {
-        filename: '[name].styles.js',
+        filename: `[name].styles.${+(new Date())}.js`,
         path: resolvePath('../dist/'),
     },
     entry: {

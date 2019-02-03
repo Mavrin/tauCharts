@@ -16,7 +16,7 @@ fs.readdirSync(resolvePath(`../plugins/`)).forEach((file) => {
 
 module.exports = {
     output: {
-        filename: '[name].js',
+        filename: `[name].${+(new Date())}.js`,
         path: resolvePath('../dist/plugins'),
         libraryTarget: 'umd',
     },

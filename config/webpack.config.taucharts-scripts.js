@@ -9,7 +9,7 @@ module.exports = {
         open: true,
     },
     output: {
-        filename: '[name].js',
+        filename: `[name].${+(new Date())}.js`,
         path: resolvePath('../dist/'),
         library: 'Taucharts',
         libraryTarget: 'umd',
